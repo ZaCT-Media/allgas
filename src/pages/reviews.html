@@ -1,0 +1,39 @@
+---
+layout: "base.html"
+description: "Meta description for the page"
+metaTitle: "Title that shows up on social OG tags"
+tagTitle: "Title that shows up on google, and is concatenated with | {{ client.name }}"
+preloadImg: "/images/imageName.format"
+permalink: "reviews/"
+eleventyNavigation:
+  key: Reviews
+  order: 1000
+---
+
+<!-- Enter html code below -->
+{% include 'page-title.html' %}
+<section class="contact reviews-page">
+  <div class="wrapper">
+    <div class="left">
+      <h2>Customer Reviews</h2>
+      <ul class="reviews">
+        {% for review in reviews %}
+        <li>
+          <span class="review-name">{{review.name}}</span>
+          <ul class="stars">
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+          </ul>
+          <p>
+            {{review.message}}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="/contact/" class="cta">Get In Touch</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "services": {
+    "Plumbing": "/plumbing/",
+    "Boilers": "/boilers/",
+    "Pipes": "/pipes/",
+    "Power Flush": "/power-flush/"
+  },
+  "legal": {
+    "Privacy Policy": "/privacy-policy/",
+    "Cookie Policy": "/cookie-policy/",
+    "Terms & Conditions": "/terms-conditions/",
+    "Contact": "/contact/"
+  }
+}

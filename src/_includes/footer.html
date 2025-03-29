@@ -1,3 +1,54 @@
-<footer>
+<footer class="footer">{% set navPages = collections.all | eleventyNavigation %}
+  <div class="wrapper">
+    <div class="footer-cols">
+      <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p class="bold">AllGas Heating & Plumbing Services</p>
+          <div class="addr">
+            <span>187 Loughborough Road,</span>
+            <span>Loughborough,</span>
+            <span>Leicestershire,</span>
+            <span>LE12 7AR</span>
+          </div>
+          <div class="phoneemail">
+            <span>M:<a href="tel:{{ client.phone }}">{{ client.phone.substring(0,3) }} {{ client.phone.substring(3,6) }} {{ client.phone.substring(6) }}</a></span>
+            <span>E:<a href="mailto:{{ client.email }}">{{ client.email }}</a></span>
+          </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          {%- for entry in navPages %}
+            <li{% if entry.url == page.url %} class="active-nav-link"{% endif %}>
+              <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          {%- for service, link in links.services %}
+            <li{% if link == page.url %} class="active-nav-link"{% endif %}>
+              <a href="{{ link }}">{{ service }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          {%- for legal, link in links.legal %}
+            <li{% if link == page.url %} class="active-nav-link"{% endif %}>
+              <a href="{{ link }}">{{ legal }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
 
+    </div>
+     <div class="copyright">
+       <span>© 2025 {{client.name}}. All Rights Reserved</span>
+     </div>
+  </div>
 </footer>

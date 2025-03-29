@@ -1,11 +1,34 @@
-<header>{% set navPages = collections.all | eleventyNavigation %}
-  <nav>
-    <ul>
-      {%- for entry in navPages %}
-        <li{% if entry.url == page.url %} class="active-nav-link"{% endif %}>
-          <a href="{{ entry.url }}">{{ entry.title }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
+<header class="header">{% set navPages = collections.all | eleventyNavigation %}
+  <nav class="desktop-navigation">
+    <a href="/"><img src="../assets/images/logo.png" alt="Company Logo" class="nav-logo"></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        {%- for entry in navPages %}
+          <li{% if entry.url == page.url %} class="active-nav-link "{% endif %}>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+      <div class="two-cta">
+        <a href="tel:{{ client.phone }}" class="cta">{{ client.phone.substring(0,3) }} {{ client.phone.substring(3,6) }} {{ client.phone.substring(6) }}</a>
+        <a href="mailto:{{ client.email }}" class="cta">{{ client.email }}</a>
+      </div>
+    </div>
+    <button class="hamburger-toggle" onclick="toggleMenu()" aria-label="Hamburger-toggle">
+        <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </button>
+  </nav>
+  <nav class="mobile-navigation">
+      <ul class="mobile-nav-links">
+        {%- for entry in navPages %}
+          <li{% if entry.url == page.url %} class="active-nav-link"{% endif %}>
+            <a href="{{ entry.url }}" class="animation-link mobile-nav-link">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
   </nav>
 </header>

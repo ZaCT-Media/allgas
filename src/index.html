@@ -1,12 +1,195 @@
 ---
-layout: 'base.html' 
+layout: "base.html"
 description: "Meta description for the page"
-metaTitle: 'Title that shows up on social OG tags'
-tagTitle: 'Small Business Websites | £0 Upfront £25 Per Month'
-preloadImg: '/images/imageName.format'
-permalink: '/'
+metaTitle: "Title that shows up on social OG tags"
+tagTitle: "Small Business Websites | £0 Upfront £25 Per Month"
+preloadImg: "/images/imageName.format"
+permalink: "/"
 eleventyNavigation:
-    key: Home
-    order: 0
+  key: Home
+  order: 0
 ---
 
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="wrapper">
+    <div class="hero-content slide-in-bottom">
+      <h1>Reliable Gas Services, You Can Trust</h1>
+      <p>
+        From installations to emergency repairs, AllGas provides professional,
+        safe, and efficient gas services for homes and businesses in Charnwood
+        Borough, and surrounding areas of Leicestershire.
+      </p>
+      <div class="two-cta">
+        <a href="#contact" class="cta">Get A Free Quote</a>
+        <a href="#services" class="cta">Our Services</a>
+      </div>
+    </div>
+    {% image "./src/assets/images/pete's-van.png", "Pete's Van", "hero-van slide-in-right",
+    "eager"%}
+    <img
+      src="../assets/images/gas-safe.svg" 
+      alt="Gas Safe Register Logo"
+      class="gas-safe-hero"
+    />
+  </div>
+</section>
+
+<!-- services -->
+<section class="services" id="services">
+  <div class="wrapper">
+    <div class="left">
+      <div>
+        <h2>Our Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+          Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
+          mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+          tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
+          suscipit magna interdum eu. Curabitur pellentesque.
+        </p>
+        <div class="two-cta">
+          <a href="/contact/" class="cta">Get A Free Quote</a>
+          <a href="/services/" class="cta">Our Services</a>
+        </div>
+      </div>
+      {% image "./src/assets/images/clean-filter.png", "Cleaning a filter with a
+      pipecleaner", "services-picture", "lazy"%}
+    </div>
+    <ul class="right">
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>Boiler Servicing</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna.
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>Boiler installations</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur sit amet.
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>Heating Systems</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+              vitae mattis tellus.
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>Power Flush</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur,
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>Bathroom refits</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna.
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact/">
+          <div>
+            <h3>General Plumbing</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+              mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+              vitae mattis tellus.
+            </p>
+          </div>
+          <span class="fake-link">Learn More</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- about pete -->
+<section class="about" id="about">
+  <div class="wrapper">
+    <div>
+      <h2>Pete - Your Trusted Gas and plumbing Expert</h2>
+      <p>
+        Pete brings over 26 years of experience to every job. Based in
+        Leicestershire, his dedication to quality workmanship and exceptional
+        customer service has earned him a reputation for reliability and
+        trustworthiness. Being City and Guilds accredited, a BAXI-approved
+        boiler installer, and Gas Safe registered, Pete combines
+        industry-leading qualifications with a commitment to delivering
+        exceptional service you can rely on.
+      </p>
+      <p>
+        Whether it’s a routine service, an emergency repair, or a new boiler
+        installation, Pete and his team are committed to delivering top-notch
+        results every time.
+      </p>
+      <div class="two-cta">
+        <a href="/contact/" class="cta">Get A Free Quote</a>
+        <a href="/services/" class="cta">Our Services</a>
+      </div>
+    </div>
+    {% image "./src/assets/images/pete.png", "Portrait of Pete", "about-pete",
+    "lazy"%}
+  </div>
+</section>
+
+<!-- trusted -->
+<section class="trusted" id="trusted">
+  <div class="wrapper">
+    <div>
+      <h2>Certified & Trusted</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+        Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
+        mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
+        tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
+        suscipit magna interdum eu.
+      </p>
+    </div>
+    <div class="credits">
+      {% image "./src/assets/images/bpec.png", "BPEC logo", "", "lazy"%} {%
+      image "./src/assets/images/wras.png", "wras logo", "", "lazy"%} {% image
+      "./src/assets/images/gas-safe-dark.png", "Gas Safe Logo", "", "lazy"%} {%
+      image "./src/assets/images/city&guilds.png", "city & guilds logo", "",
+      "lazy"%}
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+{% include 'contact-form.html' %}

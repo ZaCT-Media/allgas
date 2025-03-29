@@ -1,0 +1,109 @@
+<section class="contact" id="contact">
+    <div class="wrapper">
+      <div class="top">
+        
+      <h2>Get A Free Quote</h2>
+      <p>To get your free quote please fill in your information below for a call back or call us on
+      <a href="tel:{{ client.phone }}">{{ client.phone.substring(0,3) }} {{ client.phone.substring(3,6) }} {{ client.phone.substring(6) }}</a> and we'll call you back.</p>
+      </div>
+      <div class="bottom">
+
+
+    <div class="left">
+      <h3>Customer Reviews</h3>
+      <ul class="reviews">
+        {% for review in reviews.slice(0,3) %}
+        <li>
+          <span class="review-name">{{review.name}}</span>
+          <ul class="stars">
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+            <li><img src="../assets/images/star.svg" alt="" /></li>
+          </ul>
+          {% set message = review.message + '' %} {% set truncated =
+          message.slice(0, 200) %}
+          <p>
+            {{ truncated }}...
+            <a href="/reviews/" class="read-more">Read More</a>
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="/reviews" class="cta">View All Reviews</a>
+    </div>
+    <div>
+      <form action="">
+        <h3>Provide Your Contact Information</h3>
+        <label>
+          Name
+          <input
+            required
+            type="text"
+            class="form-input"
+            id="name"
+            name="name"
+            placeholder="John Smith"
+          />
+        </label>
+        <label>
+          Email
+          <input
+            required
+            type="text"
+            class="form-input"
+            id="email"
+            name="email"
+            placeholder="john@example.com"
+          />
+        </label>
+        <label>
+          Phone Number
+          <input
+            required
+            type="tel"
+            class="form-input"
+            id="phone"
+            name="phone"
+            placeholder="Your Phone Number"
+          />
+        </label>
+        <label>
+          House Number
+          <input
+            required
+            type="text"
+            class="form-input"
+            id="house-number"
+            name="house-number"
+            placeholder="187"
+          />
+        </label>
+        <label>
+          Postcode
+          <input
+            required
+            type="text"
+            class="form-input"
+            id="postcode"
+            name="postcode"
+            placeholder="LE12 7AR"
+          />
+        </label>
+        <label class="form-label">
+          Message
+          <textarea
+            required
+            class="form-input"
+            id="message"
+            name="message"
+            placeholder="Message..."
+          ></textarea>
+        </label>
+        <button class="cta">Submit</button>
+      </form>
+    </div>
+      </div>
+  </div>
+</section>
